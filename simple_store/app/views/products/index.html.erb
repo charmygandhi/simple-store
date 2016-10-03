@@ -24,14 +24,18 @@
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Product', new_product_path %>
 <br>
+<p> The total number of unique products : <%= @total_unique %></p>
+<p> The average price : <%= @average_price %> </p>
+<p> The quantity of stock : <%= @quantity %> </p>
+
 <% 100.times do %>
   <p>Chunky Bacon </p>
   <%end%>
